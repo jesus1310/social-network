@@ -66,7 +66,7 @@ public class MessagePost
      */
     public void display(){
         System.out.println("Autor: " + username + "\nMensaje: " + message
-                            + "\nEnviado hace " + timeString(System.currentTimeMillis()) +
+                            + "\nEnviado hace " + timeString(timestamp) +
                             "\nHa recibido " + likes + " me gusta");
         if(comments.size() > 0){
             for(int i = 0; i < comments.size(); i++)
