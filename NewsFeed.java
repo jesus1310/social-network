@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 
 /**
  * Write a description of class NewsFeed here.
@@ -7,27 +8,48 @@
  */
 public class NewsFeed
 {
-    // instance variables - replace the example below with your own
-    private int x;
+    private ArrayList<MessagePost> messages;
+    private ArrayList<PhotoPost> photos;
 
     /**
      * Constructor for objects of class NewsFeed
      */
     public NewsFeed()
     {
-        // initialise instance variables
-        x = 0;
+        messages = new ArrayList<>();
+        photos = new ArrayList<>();
     }
 
     /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
+     * Añade un mensaje al muro
      */
-    public int sampleMethod(int y)
+    public void addMessagePost(MessagePost message)
     {
-        // put your code here
-        return x + y;
+        messages.add(message);
+    }
+
+    /**
+     * Añade un mensaje con foto al muro
+     */
+    public void addPhotoPost(PhotoPost photo)
+    {
+        photos.add(photo);
+    }
+
+    /**
+     * Muestra los mensajes del muro, primero muestra
+     * los mensajes normales y luego los que tienen foto
+     */
+    public void show()
+    {
+        for(int i = 0; i < messages.size(); i++)
+        {
+            messages.get(i).display();
+        }
+
+        for(int i = 0; i < photos.size(); i++)
+        {
+            photos.get(i).display();
+        }
     }
 }

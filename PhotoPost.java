@@ -74,7 +74,7 @@ public class PhotoPost
      * Método que muestra todas las caracteristicas de las entradas
      */
     public void display(){
-        System.out.println("Autor: " + username + "\nNombre de archivo: " + filename
+        System.out.println("\nAutor: " + username + "\nNombre de archivo: " + filename
                          + "\nTexto de la imagen: " + caption 
                          + "\nEnviado hace " + timeString(System.currentTimeMillis())
                          + "\nHa recibido " + likes + " me gusta");

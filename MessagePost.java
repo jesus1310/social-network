@@ -65,7 +65,7 @@ public class MessagePost
      * Método que muestra todas las caracteristicas de las entradas
      */
     public void display(){
-        System.out.println("Autor: " + username + "\nMensaje: " + message
+        System.out.println("\nAutor: " + username + "\nMensaje: " + message
                             + "\nEnviado hace " + timeString(System.currentTimeMillis()) +
                             "\nHa recibido " + likes + " me gusta");
         if(comments.size() > 0){
