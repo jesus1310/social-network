@@ -55,6 +55,13 @@ public class PhotoPost
     public String getFilename(){
         return filename;
     }
+    
+    /**
+     * Método que devuelve el texto que acompaña a la imagen
+     */
+    public String getCaption(){
+        return caption;
+    }
 
     /**
      * Método que devuelve el tiempo desde que se crea el mensaje
@@ -68,7 +75,7 @@ public class PhotoPost
      */
     public void display(){
         System.out.println("Autor: " + username + "\nNombre de archivo: " + filename
-                         + "\nImagen: " + caption 
+                         + "\nTexto de la imagen: " + caption 
                          + "\nEnviado hace " + timeString(System.currentTimeMillis())
                          + "\nHa recibido " + likes + " me gusta");
         if(comments.size() > 0){
